@@ -6,25 +6,63 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
-  <section class="bg-[url('../images/section1.png')] h-screen bg-no-repeat bg-cover">
+<body class="overflow-x-hidden">
+  <section class="bg-[url('../images/section11.png')] bg-no-repeat bg-cover w-full h-screen">
     <header class="flex py-3">
       <div class="md:ml-[20%] ml-[2%] w-[45px]">
         <img src="./images/logo.png" alt="logo">
       </div>
       <nav class="md:ml-[45%] flex items-center w-[170px] ml-[30%]">
         <ul class="flex justify-between text-[12px] text-white underline font-semibold w-full">
-          <li><a href="#">01. HISTORY</a></li>
-          <li><a href="#">02. TEAM</a></li>
+          <li class="hover:font-extrabold"><a href="#history">01. HISTORY</a></li>
+          <li class="hover:font-extrabold"><a href="#">02. TEAM</a></li>
         </ul>
       </nav>
     </header>
-    <div class="border border-black">
-      <h1 class="text-[75px]">
-        <span>LOSANGELES</span><br>
-        <span>MOUNTAINS</span>
+    <div class="flex mt-[150px] justify-center ">
+      <h1 class="md:text-7xl font-bold text-5xl">
+        <span class="text-color-text1">LOSANGELES</span><br>
+        <span class="text-color-text2">MOUNTAINS</span>
       </h1>
     </div>
+  </section>
+  <section class="flex items-center h-[60px]">
+    <div class="flex md:ml-[20%] ml-[2%] gap-2">
+      <div class="w-[45px] flex">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="flex justify-center ">
+        <h1 class="font-bold">
+          <span class="text-color-text1">LOSANGELES</span><br>
+          <span class="text-color-text2">MOUNTAINS</span>
+        </h1>
+      </div>
+    </div>
+    <div class="md:ml-[45%] flex items-center w-[170px] ml-[30%]">
+      <ul class="flex justify-between text-[12px] text-color-text1 underline font-semibold w-full">
+        <li class="hover:font-extrabold font-bold"><a href="#history">01. HISTORY</a></li>
+        <li class="hover:font-extrabold font-bold"><a href="#">02. TEAM</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="bg-[url('../images/section2.png')] bg-no-repeat bg-cover w-full h-screen pt-[50px]" id="history">
+    <div class="md:w-[50%] mx-auto w-[95%]">
+      <div class="flex">
+        <div >
+          <span class="md:text-8xl text-6xl font-bold text-gray-400">01</span>
+        </div>
+        <div class="md:mt-[35px] mt-[9px]">
+          <span class="md:text-3xl text-2xl font-bold text-gray-600">HISTORY</span>
+          <div class="w-[15px] h-[15px] bg-black bg-opacity-25"></div>
+        </div>
+      </div>
+      <div class="pl-16">
+        <p>
+          Lorem ipsum dolor sit amet, mel impetus ocurreret ea, te vel munere petentium maiestatis. Oratio homero libris eum no, no mel doctus legimus. Vel ancillae dissentiet ei. Sea cu latine sanctus, scripta dissentiet ea vis. No possim conclusionemque mel.
+        </p>
+      </div>
+    </div>
+
   </section>
   
 </body>
