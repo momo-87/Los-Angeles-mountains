@@ -179,6 +179,38 @@
     </div>
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <footer class="flex items-center h-[60px] bg-color-text2">
     <div class="flex md:ml-[20%] ml-[2%] gap-2">
       <div class="w-[45px] flex">
@@ -195,54 +227,8 @@
       <p class="font-bold text-gray-400 text-[12px]">COPYRIGHT 2016. ALL RIGHT RESERVED</p>
     </div>
   </footer>
-  <script>
-    document.querySelector('#angle-down').addEventListener('click', () => {
-      document.querySelector('#accordion-content').classList.toggle('hidden');
-      document.querySelector('.fa-solid').classList.toggle('fa-angle-up');
-    });
-    document.querySelector('#angle-down2').addEventListener('click', () => {
-      document.querySelector('#accordion-content2').classList.toggle('hidden');
-      document.querySelector('.fa2').classList.toggle('fa-angle-up');
-    });
-    document.querySelector('#angle-down3').addEventListener('click', () => {
-      document.querySelector('#accordion-content3').classList.toggle('hidden');
-      document.querySelector('.fa3').classList.toggle('fa-angle-up');
-    });
-
-    const team1 = document.querySelector('#team1');
-    const team2 = document.querySelector('#team2');
-    const liMountain1 = [document.querySelector('#liMountain1'), document.querySelector('#liMountain3')];
-    const liMountain2 = [document.querySelector('#liMountain2'), document.querySelector('#liMountain4')];
-    const mountain1 = [document.querySelector('#mountain1'), document.querySelector('#mountain3')];
-    const mountain2 = [document.querySelector('#mountain2'), document.querySelector('#mountain4')];
-    mountain1.forEach((item) => {
-      item.addEventListener('click', () => {
-        if(team1.classList.contains('hidden')) team1.classList.toggle('hidden');
-        if(!team2.classList.contains('hidden')) team2.classList.toggle('hidden');
-
-        liMountain1.forEach((li) => {
-          if(!li.classList.contains('active')) li.classList.toggle('active');
-        });
-        
-        liMountain2.forEach((li) => {
-          if(li.classList.contains('active')) li.classList.toggle('active');
-        });
-      });
-    });
-    mountain2.forEach((item) => {
-      item.addEventListener('click', () => {
-        if(team2.classList.contains('hidden')) team2.classList.toggle('hidden');
-        if(!team1.classList.contains('hidden')) team1.classList.toggle('hidden');
-
-        liMountain2.forEach((li) => {
-          if(!li.classList.contains('active')) li.classList.toggle('active');
-        });
-        
-        liMountain1.forEach((li) => {
-          if(li.classList.contains('active')) li.classList.toggle('active');
-        });
-      });
-    });
-  </script>
+  
+  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>
