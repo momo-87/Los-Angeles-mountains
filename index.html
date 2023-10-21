@@ -112,8 +112,8 @@
   </section>
   <div class="md:pl-[22.5%] bg-color-text2 h-[50px] flex items-center relative">
     <ul class="md:flex text-gray-300 font-bold gap-3 hidden">
-      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline"><a href="#team" class="[&.active]:bg-gray-300">MOUNTAIN 1</a></li>
-      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline"><a href="#team">MOUNTAIN 2</a></li>
+      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline"><a href="#team" id="mountain1">MOUNTAIN 1</a></li>
+      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline"><a href="#team" id="mountain2">MOUNTAIN 2</a></li>
     </ul>
 
      <!-- Accordion start -->
@@ -130,12 +130,8 @@
     </div>
     <!-- Accordion end -->
 
-
-
-
-
   </div>
-  <section class="bg-[url('../images/section3.png')] bg-no-repeat bg-cover w-full h-[400px] pt-[70px]" id="team">
+  <section class="bg-[url('../images/section3.png')] bg-no-repeat bg-cover w-full h-[400px] pt-[70px]" id="team1">
     <div class="bg-white bg-opacity-60 md:pl-[30px] w-[350px] md:ml-[20%] py-3 mx-auto px-3">
       <h1 class="md:text-2xl text-2xl font-bold ">SCHEDULE</h1>
       <div class="flex flex-col gap-5">
@@ -156,6 +152,29 @@
       </div>
     </div>
   </section>
+
+  <section class="bg-[url('../images/section32.png')] bg-no-repeat bg-cover w-full h-[400px] pt-[70px] hidden" id="team2">
+    <div class="bg-white bg-opacity-60 md:pl-[30px] w-[350px] md:ml-[20%] py-3 mx-auto px-3">
+      <h1 class="md:text-2xl text-2xl font-bold ">SCHEDULE</h1>
+      <div class="flex flex-col gap-5">
+        <div class="grid grid-cols-2 grid-rows-1 grid-flow-row">
+          <div>16 Nov 2016</div>
+          <div>Ferri facer malorum</div>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-1 grid-flow-row">
+          <div>13 Dec 2016</div>
+          <div>Ferri facer malorum</div>
+          <div>28 Dec 2016</div>
+          <div>Ferri facer malorum</div>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-1 grid-flow-row">
+          <div>9 Feb 2017</div>
+          <div>Ferri facer malorum</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <footer class="flex items-center h-[60px] bg-color-text2">
     <div class="flex md:ml-[20%] ml-[2%] gap-2">
       <div class="w-[45px] flex">
@@ -184,6 +203,21 @@
     document.querySelector('#angle-down3').addEventListener('click', () => {
       document.querySelector('#accordion-content3').classList.toggle('hidden');
       document.querySelector('.fa3').classList.toggle('fa-angle-up');
+    });
+
+    const team1 = document.querySelector('#team1');
+    const team2 = document.querySelector('#team2');
+    document.querySelector('#mountain1').addEventListener('click', () => {
+      if(team1.classList.contains('hidden')){
+        team1.classList.toggle('hidden');
+      } 
+      if(!team2.classList.contains('hidden')){
+        team2.classList.toggle('hidden');
+      } 
+    });
+    document.querySelector('#mountain2').addEventListener('click', () => {
+      if(team2.classList.contains('hidden')) team2.classList.toggle('hidden');
+      if(!team1.classList.contains('hidden')) team1.classList.toggle('hidden');
     });
   </script>
 </body>

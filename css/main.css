@@ -683,6 +683,10 @@ video {
   margin-top: 0.5rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -980,6 +984,10 @@ video {
 
 .bg-\[url\(\'\.\.\/images\/section1\.png\'\)\] {
   background-image: url('../images/section1.png');
+}
+
+.bg-\[url\(\'\.\.\/images\/section32\.png\'\)\] {
+  background-image: url('../images/section32.png');
 }
 
 .bg-cover {
