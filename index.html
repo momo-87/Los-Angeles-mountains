@@ -6,6 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="overflow-x-hidden md:w-[80%] mx-auto">
   <section class="bg-[url('../images/section1.png')] bg-no-repeat bg-cover w-full h-screen">
@@ -112,8 +113,8 @@
   </section>
   <div class="md:pl-[22.5%] bg-color-text2 h-[50px] flex items-center relative">
     <ul class="md:flex text-gray-300 font-bold gap-3 hidden">
-      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline"><a href="#team" id="mountain1">MOUNTAIN 1</a></li>
-      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline"><a href="#team" id="mountain2">MOUNTAIN 2</a></li>
+      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline active" id="liMountain1"><a href="#team" id="mountain1">MOUNTAIN 1</a></li>
+      <li class="hover:bg-gray-300 hover:text-color-text2 px-3 hover:underline" id="liMountain2"><a href="#team" id="mountain2">MOUNTAIN 2</a></li>
     </ul>
 
      <!-- Accordion start -->
@@ -174,7 +175,7 @@
       </div>
     </div>
   </section>
-  
+
   <footer class="flex items-center h-[60px] bg-color-text2">
     <div class="flex md:ml-[20%] ml-[2%] gap-2">
       <div class="w-[45px] flex">
@@ -207,17 +208,19 @@
 
     const team1 = document.querySelector('#team1');
     const team2 = document.querySelector('#team2');
+    const liMountain1 = document.querySelector('#liMountain1');
+    const liMountain2 = document.querySelector('#liMountain2');
     document.querySelector('#mountain1').addEventListener('click', () => {
-      if(team1.classList.contains('hidden')){
-        team1.classList.toggle('hidden');
-      } 
-      if(!team2.classList.contains('hidden')){
-        team2.classList.toggle('hidden');
-      } 
+      if(team1.classList.contains('hidden')) team1.classList.toggle('hidden');
+      if(!team2.classList.contains('hidden')) team2.classList.toggle('hidden');
+      if(!liMountain1.classList.contains('active')) liMountain1.classList.toggle('active');
+      if(liMountain2.classList.contains('active')) liMountain2.classList.toggle('active');
     });
     document.querySelector('#mountain2').addEventListener('click', () => {
       if(team2.classList.contains('hidden')) team2.classList.toggle('hidden');
       if(!team1.classList.contains('hidden')) team1.classList.toggle('hidden');
+      if(!liMountain2.classList.contains('active')) liMountain2.classList.toggle('active');
+      if(liMountain1.classList.contains('active')) liMountain1.classList.toggle('active');
     });
   </script>
 </body>
